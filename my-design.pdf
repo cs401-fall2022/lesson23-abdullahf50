@@ -1,0 +1,13 @@
+The website has images and supports database.
+Can create a blog entry
+
+edit an existing blog entry
+
+delete blog entries
+
+Be able to store the blog entries in a database.
+
+
+The website will have multiple pages with CSS style
+
+I will use sqlite for the database
