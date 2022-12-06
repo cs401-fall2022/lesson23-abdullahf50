@@ -25,6 +25,10 @@
                 <input name="blog" id="blog" value="Hi this is my blog text!" />
             </div>
             <div>
+                <label for="blog">Text</label>
+                <textarea name="blog" id="blog" rows="3" cols="40" ></textarea>/>
+            </div>
+            <div>
                 <button>Send my blog</button>
             </div>
         </form>
@@ -39,5 +43,15 @@
                 <button>delete my blog</button>
             </div>
         </form>
+        <h3>Edit stuff</h3>
+                <form action="/delete" method="POST">
+            <div>
+                <label for="blog">Blog to delete?</label>
+                <input name="blog" id="blog" value="1" />
+            </div>
+            <div>
+                <button>delete my blog</button>
+            </div>
+                </form>
     </body>
 </html>
