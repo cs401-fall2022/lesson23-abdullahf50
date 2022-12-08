@@ -9,12 +9,18 @@ a {
 }
 
 .container{
-  background-color: yellow;
-  
-  color:blue;
-
-  align-content: center;
-
+    width: 60px;
+    border: 2px;
+    border-color:silver;
+    border-style: solid;
+    padding: 5px;
+    background-color: rgb(104, 94, 100);
+    color: white;
+    font-weight: bold;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 
 .List {
