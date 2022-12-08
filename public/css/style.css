@@ -42,6 +42,7 @@ a {
   margin-right: auto;
   margin-bottom: auto;
   box-shadow: inset 0px 0px 277px 3px #4198a3;
+  scroll-snap-align: start;
 }
 
 textarea {
