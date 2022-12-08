@@ -49,7 +49,7 @@ router.post('/add', (req, res, next) => {
         console.log("Getting error " + err);
         exit(1);
       }
-      console.log("inserting " + req.body.blog);
+      console.log("inserting " + req.body.blog + req.body.blog_title);
       //NOTE: This is dangerous! you need to sanitize input from the user
       //this is ripe for a exploit! DO NOT use this in production :)
       //Try and figure out how why this is unsafe and how to fix it.
@@ -63,7 +63,7 @@ router.post('/add', (req, res, next) => {
 })
 
 router.post('/delete', (req, res, next) => {
-  console.log("deleting blog for id#!");
+  console.log("deleting blog for id!");
   var db = new sqlite3.Database('mydb.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
