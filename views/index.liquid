@@ -18,9 +18,9 @@
                 {% for txt in data%}
                     <div class="container">
                         <ul> 
-                            <h4>ID - {{txt.blog_id}}</h4>
-                            <h5>{{txt.blog_title}}</h5>
-                            <p>{{txt.blog_txt}}</p>
+                            <h4>{{txt.blog_title}}</h4>
+                            <h5>{{txt.blog_txt}}</h5>
+                            <p>ID - {{txt.blog_id}}</p>
                         </ul>
                     </div>
                 {% endfor%}
@@ -30,7 +30,6 @@
 
 
         <div class="container">
-            <hr>
             <h2>Add stuff</h2>
             <form action="/add" method="POST">
                 <div>
@@ -45,7 +44,6 @@
                     <button>Add my blog</button>
                 </div>
             </form>
-            <hr>
         </div>    
 
 
