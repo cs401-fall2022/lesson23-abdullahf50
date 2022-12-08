@@ -10,48 +10,85 @@
     </head>
     <body>
         <h1>Welcome to my Blog Site</h1>
-        <img src="/images/exploits_of_a_mom.png">
-        <ul>
-            {% for txt in data%}
-            <ul>{{txt.blog_id}} - {{txt.blog_txt}}  </ul>
-            {% endfor%}
-        </ul>
 
-        <hr>
-        <h2>Add stuff</h2>
-        <form action="/add" method="POST">
-            <div>
-                <label for="blog">What is your blog txt?</label>
-                <input name="blog" id="blog" value="Hi this is my blog text!" />
-            </div>
-            <div>
-                <label for="blog">Text</label>
-                <textarea name="blog" id="blog" rows="3" cols="40" ></textarea>/>
-            </div>
-            <div>
-                <button>Send my blog</button>
-            </div>
-        </form>
-        <hr>
-        <h2>Delete stuff</h2>
-                <form action="/delete" method="POST">
-            <div>
-                <label for="blog">Blog to delete?</label>
-                <input name="blog" id="blog" value="1" />
-            </div>
-            <div>
-                <button>delete my blog</button>
-            </div>
-        </form>
-        <h3>Edit stuff</h3>
-                <form action="/delete" method="POST">
-            <div>
-                <label for="blog">Blog to delete?</label>
-                <input name="blog" id="blog" value="1" />
-            </div>
-            <div>
-                <button>delete my blog</button>
-            </div>
+        <img src="/images/exploits_of_a_mom.png">
+
+        <div class="List">
+            <ul>
+                {% for txt in data%}
+                    <div class="container">
+                        <ul> 
+                            <h4>ID - {{txt.blog_id}}</h4>
+                            <h5>{{txt.blog_title}}</h5>
+                            <p>{{txt.blog_txt}}</p>
+                        </ul>
+                    </div>
+                {% endfor%}
+            </ul>
+        </div>
+
+
+
+        <div class="container">
+            <hr>
+            <h2>Add stuff</h2>
+            <form action="/add" method="POST">
+                <div>
+                    <label for="blog">What is your blog txt?</label>
+                    <input name="blog" id="blog" value="Hi this is my blog text!" />
+                </div>
+                <div>
+                    <label for="blog">Text</label>
+                    <textarea name="blog" id="blog_txt" rows="3" cols="40" ></textarea>/>
+                </div>
+                <div>
+                    <button>Send my blog</button>
+                </div>
+            </form>
+            <hr>
+        </div>    
+
+
+        <div class="container">
+            <h2>Delete stuff</h2>
+                    <form action="/delete" method="POST">
+                <div>
+                    <label for="blog">Blog to delete?</label>
+                    <input name="blog" id="blog" value="" />
+                </div>
+                <div>
+                    <button>delete my blog</button>
+                </div>
+            </form>
+        </div>    
+
+
+
+        <div class="container"></div>
+             <h3>Edit stuff</h3>
+                <form action="/edit" method="POST">
+                    <div>
+                        <label for="blog">Blog to delete?</label>
+                        <input name="blog" id="blog" value="1" />
+                    </div>
+                    <div>
+                        <label for="blog">Enter new title for blog</label>
+                        <input name="blog_title" id="blog_title" value="blog_title"/>
+                    </div>
+                    <div>
+                        <label for="blog">Enter new Content</label>
+                        <textarea name="blog_txt" id="blog_txt" rows="4" cols="60">Blog Content</textarea>
+                    </div>
+                    <div>
+                        <button>Edit my blog</button>
+                    </div>
                 </form>
+        </div>
+
+
+
+
+
+
     </body>
 </html>
