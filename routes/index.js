@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose()
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  var db = new sqlite3.Database('mydb.sqlite3',
+  var db = new sqlite3.Database('mydbase.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -15,8 +15,7 @@ router.get('/', function (req, res, next) {
       db.all(`SELECT name FROM sqlite_master WHERE type='table' AND name='blog'`,
         (err, rows) => {
           if (rows.length === 1) {
-            console.log("Table exists!");
-            db.all(` select blog_id, blog_txt from blog`, (err, rows) => {
+            db.all(` select blog_id, blog_title, blog_txt from blog`, (err, rows) => {
               console.log("returning " + rows.length + " records");
               res.render('index', { title: 'Express', data: rows });
             });
@@ -24,7 +23,7 @@ router.get('/', function (req, res, next) {
             console.log("Creating table and inserting some sample data");
             db.exec(`create table blog (
                      blog_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                     blog_title VARCHAR(40),
+                     blog_title VARCHAR(30),
                      blog_txt text NOT NULL);
 
                       insert into blog (blog_txt, blog_title)
@@ -41,8 +40,8 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/add', (req, res, next) => {
-  console.log("Adding blog to table without sanitizing input! YOLO BABY!!");
-  var db = new sqlite3.Database('mydb.sqlite3',
+  console.log("Adding blog to table");
+  var db = new sqlite3.Database('mydbase.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -64,7 +63,7 @@ router.post('/add', (req, res, next) => {
 
 router.post('/delete', (req, res, next) => {
   console.log("deleting blog for id!");
-  var db = new sqlite3.Database('mydb.sqlite3',
+  var db = new sqlite3.Database('mydbase.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -85,7 +84,7 @@ router.post('/delete', (req, res, next) => {
 
 router.post('/edit', (req, res, next) => {
   console.log("editing blog!");
-  var db = new sqlite3.Database('mydb.sqlite3',
+  var db = new sqlite3.Database('mydbase.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
