@@ -9,9 +9,13 @@ a {
 }
 
 .container{
-  background-color: azure;
+  background-color: yellow;
   margin-top: 30px;
-  padding: 12;
+  padding-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  color:blue;
 
 }
 
