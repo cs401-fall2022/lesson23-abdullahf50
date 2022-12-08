@@ -20,6 +20,14 @@ a {
 }
 
 .List {
-  width:20px;
+  width:20%;
   float: left;
+}
+
+textarea {
+  resize: none;
+}
+
+h3 {
+  color: blueviolet;
 }
