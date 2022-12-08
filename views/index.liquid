@@ -13,19 +13,21 @@
 
         <!--  <img src="/images/exploits_of_a_mom.png"> -->
 
-        <div class="List">
-            <ul>
-                {% for txt in data%}
-                    <div class="container">
-                        <ul> 
-                            <h4>{{txt.blog_title}}</h4>
-                            <h5>{{txt.blog_txt}}</h5>
-                            <p>ID - {{txt.blog_id}}</p>
-                        </ul>
-                    </div>
-                {% endfor%}
-            </ul>
-        </div>
+        <div class="align">
+            <div class="List">
+                <ul>
+                    {% for txt in data%}
+                        <div class="container">
+                            <ul> 
+                                <h4>{{txt.blog_title}}</h4>
+                                <h5>{{txt.blog_txt}}</h5>
+                                <p>ID - {{txt.blog_id}}</p>
+                            </ul>
+                        </div>
+                    {% endfor%}
+                </ul>
+            </div>
+        </div>    
 
 
 
