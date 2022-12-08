@@ -10,14 +10,17 @@ a {
 }
 
 .container{
-    width: 400px;
+    width: 600px;
     border: 2px;
     border-color:silver;
     border-style: solid;
     padding: 5px;
     color: white;
     font-weight: bold;
-    float: left;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
     box-shadow: inset 0px 0px 277px 3px #4c3f37;
 }
 
