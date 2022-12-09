@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Abdullah Faizi
+- email: abdullahmohammad530@u.boisestate.edu
 
 ## Instructions
 
@@ -21,12 +21,13 @@ Be safe CITE!
 
 ## Experience
 
-TODO
+This project was challenging because it had so many small details that I had to keep track of
 
 ## Known issues or Bugs
 
-TODO
+Some of the issues was getting the button to work so it took some time to get the delete posts button
+to work
 
 ## Sources used
 
-TODO
+google, zybooks
