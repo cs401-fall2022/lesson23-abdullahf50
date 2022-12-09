@@ -49,3 +49,20 @@ h3 {
   color: rgb(1, 1, 7);
   font-size: 25px;
 }
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+button {
+  background-color: aqua;
+  text-decoration-color: black;
+}
+
+h1{
+  color:gold
+}
