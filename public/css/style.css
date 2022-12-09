@@ -25,11 +25,7 @@ a {
 }
 
 .List {
-  width:20%;
-  float: left;
-}
-
-.align {
+  float: right;
   width: 600px;
   border: 2px;
   border-color:silver;
@@ -43,6 +39,7 @@ a {
   margin-bottom: auto;
   box-shadow: inset 0px 0px 277px 3px #4198a3;
 }
+
 
 textarea {
   resize: none;
