@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
         console.log("Getting error " + err);
         exit(1);
       }
-      //Query if the table exists if not lets create it on the fly!
+
       db.all(`SELECT name FROM sqlite_master WHERE type='table' AND name='blog'`,
         (err, rows) => {
           if (rows.length === 1) {
@@ -93,7 +93,7 @@ router.post('/edit', (req, res, next) => {
       }
       console.log("editing " + req.body.blog);
       // 
-      db.exec(`edit from blog set blog_txt='${req.body.blog_txt}', blog_title='${req.body.blog_title}' where blog_id='${req.body.blog}';`);     
+      db.exec(`edit from blog set blog_txt = '${req.body.blog_txt}', blog_title = '${req.body.blog_title}' where blog_id = '${req.body.blog}';`);     
       res.redirect('/');
     }
   );
